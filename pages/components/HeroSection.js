@@ -1,5 +1,7 @@
 import React from 'react';
-
+import Image from 'next/image';
+import IoS from '../../public/images/iosdownload.svg';
+import Android from '../../public/images/androidownload.svg';
 const Hero = (props) => {
     return (
         <div className="col-md-12 herosection">
@@ -18,8 +20,8 @@ const Hero = (props) => {
                     <button type="button">Text me the link</button>
                 </div>
                 <div className="downloadbuttons">
-                    <img src="/images/androidownload.svg"/>
-                    <img className="ios" src="/images/iosdownload.svg"/>
+                    <Image src={Android}/>
+                    <Image className="ios" src={IoS}/>
                 </div>
                 <div className="hero-smalltext">
                     No government ID required to get started.

@@ -130,7 +130,7 @@
 }
 
 .downloadbuttons .ios  {
-    margin-left: 18px;
+    margin-left: 18px !important;
 }
 .hero-smalltext {
     font-family: DM Sans;
