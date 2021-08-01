@@ -1,9 +1,13 @@
 import React from 'react';
-import Image from 'next/image'
+import Image from 'next/image';
+import Fade from 'react-reveal/Fade';
+import Bounce from 'react-reveal/Bounce';
 const Hero = (props) => {
     return (
         <div className="col-md-12 herosection">
-            <div className="col-md-6 herotextarea">
+            <Bounce left>
+                <div className="col-md-6 herotextarea">
+                
                 <div className="hero-title-text">
                     Digital dollars for Africans everywhere.
                 </div>
@@ -25,8 +29,11 @@ const Hero = (props) => {
                     No government ID required to get started.
                 </div>
             </div>
+            </Bounce>
             <div className="col-md-6 hero-image">
-                <img src="/images/hero-img.svg"/>
+                <Fade right>
+                    <img src="/images/hero-img.svg"/>
+                </Fade>
             </div>
         </div>
     )

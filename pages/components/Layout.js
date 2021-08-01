@@ -20,7 +20,7 @@ const Layout = (props) => {
         <link rel="manifest" href="/images/manifest.json"/>
         <link rel="apple-touch-icon" href="/images/favicon.png"/>
       </Head>
-      <div>
+      <div className="initdiv">
         {props.children}
       </div>
         </div>
