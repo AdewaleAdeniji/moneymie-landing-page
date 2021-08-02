@@ -151,7 +151,7 @@ const Terms = (props) => {
                         Platform and Terms Subject to Change
                         </b>
                         <p>
-                        We reserve the right to change these Terms and Conditions by posting a revised agreement. If you don't agree with these changes, you must stop using the Platform. The information on the Platform is subject to change without notice.
+                        We reserve the right to change these Terms and Conditions by posting a revised agreement. If you dont agree with these changes, you must stop using the Platform. The information on the Platform is subject to change without notice.
                         </p>
 
                             
