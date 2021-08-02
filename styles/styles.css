@@ -15,6 +15,7 @@
 }
 .nav .navlogo {
     margin-left: 144px;
+    cursor: pointer;
 }
 .align-right {
     float: right;
@@ -24,7 +25,10 @@
     display: flex;
     justify-content: space-between;
 }
-
+.col-md-6.termspage.herotextarea {
+    width: 100% !important;
+    margin-bottom: 20vh;
+}
 .navlinks a 
 {  
      margin-right: 32px;
@@ -229,6 +233,21 @@
     cursor: pointer;
     margin-right: 139px;
 }
+img.flash-bg-1 {
+    position: absolute;
+    /* bottom: 100%; */
+    /* height: 150px;
+    width: 150px; */
+    right: 0;
+    margin-top: -13%;
+}
+img.flash-bg-2.navdesktop {
+    position: absolute;
+    left: -5px;
+}
+img.react-reveal.flash-bg-1.flash-3.navdesktop {
+    margin-top: -20%;
+}
 .trustsection {
     text-align: center;
     margin-bottom: 100px;
@@ -349,7 +368,7 @@ img {
     margin-right: 32px;
     padding-left: 32px;
     width: 560px;
-    height: 310px;
+    height: 320px;
     padding-bottom: 26px;
     padding-right: 33px;
 }
@@ -462,7 +481,17 @@ img {
     /* width: 1152px; */
     background: url('/images/bgimg.png');
 }
-
+.img-section{
+    background: url('/images/loop.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    height: 100%;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+}
 .sendtitle {
     font-family: DM Sans;
     font-style: normal;
@@ -580,6 +609,47 @@ img {
 }
 .mobilenav {
     display: none;
+}
+.inputarea {
+    display: flex;
+    background: #FFFFFF;
+/* Money Grey/Grey 500 */
+    border: 0.5px solid #9B9EA9;
+    border-radius: 8px;
+    width: 250px;
+    height: 48px;
+}
+
+.inputarea .options {
+    display: flex;
+    background: #F9F8FF;
+/* Money Grey/Grey 500 */
+    border-right: 0.5px solid #9B9EA9;
+    border-radius: 8px 0px 0px 8px;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.herosection .sendlinkform input[type="tel"] {
+    border: none;
+    height: 100%;
+    width: 100%;
+    font-size: 12px;
+}
+
+.sendlinkform button {
+    /* width: 200px !important; */
+}
+
+.chosenflag img {
+    width: 24px;
+    height: 24px;
+}
+
+.options i {
+    margin-left: 8px;
+    font-weight: bold;
 }
 @media(min-width:200px) and (max-width:762px){
     .navdesktop {
@@ -893,6 +963,10 @@ button.menubtn {
     }
 }
 @media(min-width:900px) and (max-width:1200px){
+    .inputarea {
+        width: 320px !important;
+        /* display: none; */
+    }
     .nav .navlogo {
         margin-left: 50px !important;
     }
@@ -945,6 +1019,10 @@ button.menubtn {
     }
 }
 @media(min-width:1440px){
+    
+    .inputarea {
+        width: 320px !important;
+    }
     .hero-title-text {
         font-size: 53px;
     }

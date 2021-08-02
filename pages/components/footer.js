@@ -1,5 +1,6 @@
 import React from 'react';
 import Fade from 'react-reveal/Fade';
+import Link from 'next/link';
 
 const Footer = (props) => {
     return (
@@ -14,8 +15,8 @@ const Footer = (props) => {
                         <li className="link-title">
                             COMPANY
                         </li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Moneymie for Business</a></li>
+                        <li><a href="https://medium.com/moneymie" target="_blank"  rel="noopener noreferrer">Blog</a></li>
+                        <li><a href="https://moneymie.link/usdcpay" target="_blank"  rel="noopener noreferrer">Moneymie for Business</a></li>
                     </ul>
                 </div>
                 <div className="footer-item">
@@ -23,10 +24,10 @@ const Footer = (props) => {
                         <li className="link-title">
                             Resources
                         </li>
-                        <li><a href="#">Terms and Conditions</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">No safe harbour for fraud</a></li>
-                        <li><a href="#">Security</a></li>
+                        <li><Link href="terms">Terms and Conditions</Link></li>
+                        <li><Link href="privacy">Privacy Policy</Link></li>
+                        <li><Link href="no-safe">No safe harbour for fraud</Link></li>
+                        {/* <li><a href="#">Security</a></li> */}
                         
                     </ul>
                 </div>
@@ -36,16 +37,16 @@ const Footer = (props) => {
                             CONTACT US
                         </li>
                         <li>
-                            <a href="#" className="contacticon">
+                            <a  href="mailto:hello@moneymie.com" target="_blank" rel="noopener noreferrer" className="contacticon" >
                                 <img src="/images/@.png"/>
                             </a>
-                            <a href="#" className="contacticon">
+                            <a  href="https://facebook.com/moneymie/" target="_blank" rel="noopener noreferrer" className="contacticon">
                                 <img src="/images/facebooknew.png" className="fb"/>
                             </a>
-                            <a href="#" className="contacticon">
+                            <a href="https://twitter.com/getMoneymie" target="_blank" rel="noopener noreferrer" className="contacticon">
                                 <img src="/images/twitternew.png"/>
                             </a>
-                            <a href="#" className="contacticon">
+                            <a href="https://www.instagram.com/moneymieapp" target="_blank" rel="noopener noreferrer" className="contacticon">
                                 <img src="/images/instanew.png"/>
                             </a>
                         </li>

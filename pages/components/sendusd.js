@@ -7,6 +7,7 @@ const SendUsd = (props) => {
     const ImageHeight = useState(760);
     const ImageWidth = useState(400);
     return (
+        <>
         <div className="col-md-12 sendusdsection">
             <Fade left>
             <div className="col-md-6">
@@ -25,6 +26,8 @@ const SendUsd = (props) => {
             </div>
             </Fade>
         </div>
+        <img src="/images/flash-bg-1.png" className="flash-bg-1 navdesktop"/>
+        </>
     )
 }
 export default SendUsd;

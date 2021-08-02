@@ -56,6 +56,7 @@ const TrustSignals = (props) => {
             </div>
                 
             </Fade>
+            <img src="/images/flash-bg-2.png" className="flash-bg-2 navdesktop"/>
         </div>
     )
 }

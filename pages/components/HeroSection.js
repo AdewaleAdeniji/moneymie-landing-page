@@ -15,9 +15,15 @@ const Hero = (props) => {
                     Send and recieve digital dollars with anyone anywhere, make online payments and earn yield.
                 </div>
                 <div className="sendlinkform">
-                    <div>
+                    <div className="inputarea">
                         
-                        <input type="tel" placeholder="Enter your phone number"/>
+                        <div className="options">
+                            <div className="chosenflag">
+                                <img src="/images/ngaflag.png"/>
+                            </div>
+                            <i className="fa fa-angle-down"></i>
+                        </div>
+                            <input type="tel" placeholder="Enter your phone number"/>
                     </div>
                     <button type="button">Text me the link</button>
                 </div>
@@ -32,7 +38,10 @@ const Hero = (props) => {
             </Bounce>
             <div className="col-md-6 hero-image">
                 <Fade right>
-                    <img src="/images/hero-img.svg"/>
+                    <div className="img-section">
+                        {/* <img src="/images/loop.gif" className="loop"/> */}
+                        <img src="/images/hero-img.svg" className="heroimg"/>
+                    </div>
                 </Fade>
             </div>
         </div>

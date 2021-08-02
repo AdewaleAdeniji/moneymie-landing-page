@@ -2,7 +2,7 @@ import React,{useState} from 'react';
 import Logo from '../../public/images/logo.svg';
 import Image from 'next/image';
 import Fade from 'react-reveal/Fade';
-
+import Link from 'next/link';
 const HeaderNavBar = (props) => {
 
     const [mobilemenu, setMobile] = useState(false);
@@ -19,16 +19,19 @@ const HeaderNavBar = (props) => {
         <>
         <Fade top>
         <div className="nav navbar navdesktop">
-            {/* <Image src={Logo} alt="Moneymie Logo"/> */}
-            <img src="images/logo.svg" className="navlogo" alt="Moneymie Logo"/>
+            <Link href="/">
+                {/* <Image src={Logo} alt="Moneymie Logo" className="navlogo"/> */}
+                <img src="images/logo.svg" className="navlogo" alt="Moneymie Logo"/>
+            </Link>
             <div className="align-right navlinks">
-                <a href="blog">Blog</a>
-                <a href="#">Get Moneymie for Business</a>
+                <a href="https://medium.com/moneymie" target="_blank"  rel="noopener noreferrer">Blog</a>
+                <a href="https://moneymie.link/usdcpay" target="_blank"  rel="noopener noreferrer">Get Moneymie for Business</a>
             </div>
         </div>
         <div className="nav navbar mobilenav">
-            
-            <img src="images/logo.svg" className="navlogo" alt="Moneymie Logo"/>
+            <Link href="/">
+                <img src="images/logo.svg" className="navlogo" alt="Moneymie Logo"/>
+            </Link>
             <div className="align-right navlinks">
                 <button className="menubtn" onClick={toggleMenu.bind(this)}>
                     <i className="fa fa-bars"></i>
@@ -39,7 +42,7 @@ const HeaderNavBar = (props) => {
         <div className={mobilemenu ? 'navmobile' : 'hidden' } onClick={handleToggle.bind(this)}>
                 <div className="navcontents">
                             <header>
-                                <img   src='images/logo.svg' alt="Moneymie Logo"/>
+                                <img src='images/logo.svg' alt="Moneymie Logo"/>
                                 <i className="fa fa-times" onClick={toggleMenu.bind(this)}></i>
                             </header>
                             <ul>
