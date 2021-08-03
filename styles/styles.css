@@ -100,13 +100,18 @@
     color:#CED9E8;
 
 }
+button {
+    outline: none;
+}
 .sendlinkform input[type="number"] {
     background: #FFFFFF;
 /* Money Grey/Grey 500 */
-    border: 0.5px solid #9B9EA9;
+
+    border: none;
+    outline: none;
     border-radius: 8px;
     width: 328px;
-    height: 48px;
+    height: 100%;
     padding: 13px;
     font-family: Inter;
     font-style: normal;
@@ -644,10 +649,26 @@ img {
 .sendlinkform button {
     /* width: 200px !important; */
 }
-
+.countrydropdown {
+    position: relative;
+    left: -35%;
+    width: fit-content;
+    bottom:-100%;
+    /* overflow: scroll; */
+}
+.sendlinkform .react-reveal.countrydropdown {left: -100%;}
+.countrydropdown select.select {
+    overflow: scroll;
+    width:200px;
+    padding:20px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-family: 'DM Sans';
+}
 .chosenflag img {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 15px;
 }
 
 .options i {
@@ -856,7 +877,9 @@ button.menubtn {
     .sendsection .sendlinkform {
         display: block;
     }
-    
+    .sendsection .inputarea  {
+        width: 100%;
+    }
     .sendsection .sendlinkform input[type="number"] {
         width: 100% !important;
         text-align: center;
@@ -966,6 +989,9 @@ button.menubtn {
     }
 }
 @media(min-width:900px) and (max-width:1200px){
+    .sendsection .inputarea  {
+        width: 350px;
+    }
     .inputarea {
         width: 320px !important;
         /* display: none; */
@@ -1021,8 +1047,10 @@ button.menubtn {
         margin-left: 20px;
     }
 }
-@media(min-width:1440px){
-    
+@media(min-width:1200px){
+    .sendsection .inputarea  {
+        width: 350px;
+    }
     .inputarea {
         width: 320px !important;
     }
@@ -1152,4 +1180,8 @@ button.menubtn {
     /* Money Grey/Grey 900 */
         color: #0D152E;
     }
+    .herosection .inputarea {
+        width: 90% !important;
+    }
+    .sendlinkform .react-reveal.countrydropdown {left: -42%;}
 }
