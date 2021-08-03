@@ -42,7 +42,10 @@ const SendLinkForm = (props) => {
         })
     }
     const SendSMS = (props) => {
-        if(usernumber!=''&&usernumber.indexOf("+")<0){
+    if(usernumber.length<6){
+        setActiveButton(false);
+    }
+    else if(usernumber!=''&&usernumber.indexOf("+")<0){
         
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
