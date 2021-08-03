@@ -45,7 +45,11 @@ const Hero =  (props) => {
         })
     }
     const SendSMS = (props) => {
-        if(usernumber!=''&&usernumber.indexOf("+")<0){
+        // console.log(usernumber.length)
+        if(usernumber.length<6){
+
+        }
+        else if(usernumber!=''&&usernumber.indexOf("+")<0){
         
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
@@ -76,12 +80,12 @@ const Hero =  (props) => {
             }
         })
         .catch(error =>{
-            setLoading(false);
+            setLoading(false);  
             inform("Error Occured",true)
         });
         }
         else {
-            inform("Please fill in your number and ensure remove your country code");
+            inform("Please fill in your number and ensure remove your country code",true);
         }
     }
     const handleCountries = (country) => {

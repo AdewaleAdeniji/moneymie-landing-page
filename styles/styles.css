@@ -656,7 +656,7 @@ img {
     bottom:-100%;
     /* overflow: scroll; */
 }
-.sendlinkform .react-reveal.countrydropdown {left: -100%;}
+
 .countrydropdown select.select {
     overflow: scroll;
     width:200px;

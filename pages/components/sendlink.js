@@ -78,7 +78,7 @@ const SendLinkForm = (props) => {
         });
         }
         else {
-            inform("Please fill in your number and ensure remove your country code");
+            inform("Please fill in your number and ensure remove your country code",true);
         }
     }
     const handleCountries = (country) => {
