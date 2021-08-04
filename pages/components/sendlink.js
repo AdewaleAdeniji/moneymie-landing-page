@@ -86,6 +86,7 @@ const SendLinkForm = (props) => {
     }
     const handleCountries = (country) => {
         setSelect(true);
+        document.getElementById("selectcountry").click();
     }
     const countryChange = (e) => {
         let country = e.target.value;
@@ -115,7 +116,7 @@ const SendLinkForm = (props) => {
                             <input type="number" placeholder="Enter your phone number" value={usernumber} onChange={HandleNumberChange}/>
                         <Fade top>
                         <div className={showSelect ? "countrydropdown" : 'hidden'}>
-                            <select className="select" onChange={countryChange}>
+                            <select className="select" onChange={countryChange} id="selectcountry">
                                 {
                                     Object.keys(countrys).map((country,index)=>{
                                         const countrydetails = countrys[country];

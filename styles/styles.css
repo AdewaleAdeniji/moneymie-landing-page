@@ -12,6 +12,12 @@
     padding: 18px;
     justify-content: space-between;
     z-index: 999;
+    transition: .6s;
+}
+.navlinks a:hover {
+    background: #533DB5;
+    border-radius: 16px;
+    color: #FFFFFF;
 }
 .nav .navlogo {
     margin-left: 144px;
@@ -31,7 +37,7 @@
 }
 .navlinks a 
 {  
-     margin-right: 32px;
+    margin-right: 32px;
     background: #F9F8FF;
     border-radius: 16px;
     padding: 5px 16px;
@@ -42,7 +48,7 @@
     line-height: 22px;
 /* identical to box height, or 137% */
     text-align: center;
-
+    transition: .6s;
 /* Money Grey/Grey 600 */
     color: #6B6F7D;
     width: fit-content;
@@ -1185,3 +1191,6 @@ button.menubtn {
     }
     .sendlinkform .react-reveal.countrydropdown {left: -42%;}
 }
+.reviewer {
+    height: 32px;
+}   

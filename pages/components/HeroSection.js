@@ -109,7 +109,7 @@ const Hero =  (props) => {
                     Digital dollars for Africans everywhere.
                 </div>
                 <div className="hero-sub-text">
-                    Send and recieve digital dollars with anyone anywhere, make online payments and earn yield.
+                    Send and receive digital dollars with anyone anywhere, make online payments and earn yield.
                 </div>
                 <div className="sendlinkform">
                     <div className="inputarea">

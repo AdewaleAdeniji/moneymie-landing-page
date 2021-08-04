@@ -26,10 +26,10 @@ const Reviews = (props) => {
 
                     </div>
                     <div className="reviewtext">
-                    “The process is unbelievably seamless. And no charges!! #Heaven. Girl the money is in my GTBank already. No be juju be that.”
+                    “This is the easiest Transaction platform I have encountered in recent times. You have created the best tool for Nigerian immigrants. So proud of you both. May the LORD bless more of your ventures in Jesus Name.”
                     
                     <h4 className="reviewer">
-                        {/* Bayonle A, Houston TX */}
+                        Bayonle A, Houston TX
                     </h4>
                     </div>
                 </div>
@@ -38,7 +38,7 @@ const Reviews = (props) => {
                 <div className="review">
                     <div className="review-head">
                         <div className="review-rate">
-                            <h1>4.3</h1>
+                            <h1>4.6</h1>
                             <img src="/images/stars.svg"/>
                         </div>
                         <div className="review-app">
@@ -48,10 +48,10 @@ const Reviews = (props) => {
 
                     </div>
                     <div className="reviewtext">
-                    “This is the easiest Transaction platform I have encountered in recent times. You have created the best tool for Nigerian immigrants. So proud of you both. May the LORD bless more of your ventures in Jesus Name.”
+                    “The process is unbelievably seamless. And no charges!! #Heaven. Girl the money is in my GTBank already. No be juju be that.”
                     
                     <h4 className="reviewer">
-                        Bayonle A, Houston TX
+                        {/* Bayonle A, Houston TX */}
                     </h4>
                     </div>
                 </div>
