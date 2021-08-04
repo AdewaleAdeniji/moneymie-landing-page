@@ -12,6 +12,7 @@ import Reviews from './components/review';
 import Download from './components/download';
 import SendLinkForm from './components/sendlink';
 import Footer from './components/footer';
+
 export default function Home() {
   useEffect(function() {
     window.dataLayer = window.dataLayer || [];

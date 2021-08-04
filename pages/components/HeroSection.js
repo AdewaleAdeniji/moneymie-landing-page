@@ -5,6 +5,7 @@ import Bounce from 'react-reveal/Bounce';
 import Joi from 'joi';
 import Swal from 'sweetalert2'
 import { countries,getEmojiFlag } from 'countries-list';
+import ShowToast from './toast';
 const Hero =  (props) => {
     // console.log(countries);
     // console.log(getEmojiFlag(1));
@@ -16,6 +17,9 @@ const Hero =  (props) => {
     const [phoneCode,setPhoneCode] = useState("+234");
     const [countryCode,setCountryCode] = useState("ng");
     const [showSelect,setSelect] = useState(false);
+    const [showtoast,setToast] = useState(false);
+    const [toastMessage,setMessage] = useState('');
+    const [toastType,setToastType] = useState(false);
     // console.log(countrys);
     // console.log(typeof(countrys));
     const HandleNumberChange = async (e) => {
@@ -38,11 +42,17 @@ const Hero =  (props) => {
         
     }
     const inform = (message,type) => {
-        Swal.fire({
-            icon: type ? 'error' : 'success',
-            text:message,
-            showConfirmButton:false
-        })
+        setToast(true);
+        setToastType(type ? type : false);
+        setMessage(message);
+        // Swal.fire({
+        //     icon: type ? 'error' : 'success',
+        //     text:message,
+        //     showConfirmButton:false
+        // })
+        setInterval(()=>{
+            setToast(false);
+        },5000)
     }
     const SendSMS = (props) => {
         // console.log(usernumber.length)
@@ -101,6 +111,7 @@ const Hero =  (props) => {
         setCountryCode(countrycode);
     }
     return (
+        <>
         <div className="col-md-12 herosection">
             <Bounce left>
                 <div className="col-md-6 herotextarea">
@@ -160,6 +171,8 @@ const Hero =  (props) => {
                 </Fade>
             </div>
         </div>
+        <ShowToast message={toastMessage} type={toastType} show={showtoast}/>
+        </>
     )
 }
 export default Hero;

@@ -2,9 +2,13 @@ import React,{useState} from 'react';
 import Fade from 'react-reveal/Fade';
 import Joi from 'joi';
 import Swal from 'sweetalert2'
+// import toastr from 'toastr';
 import { countries,getEmojiFlag } from 'countries-list';
-
+import $ from "jquery";
+import ShowToast from './toast';
+// import { message } from 'statuses';
 const SendLinkForm = (props) => {
+
     const [countrys,setCountries] = useState(countries);
     const [usernumber,setPhoneNumber] = useState('');
     const [error,setError] = useState(false);
@@ -13,6 +17,9 @@ const SendLinkForm = (props) => {
     const [phoneCode,setPhoneCode] = useState("+234");
     const [countryCode,setCountryCode] = useState("ng");
     const [showSelect,setSelect] = useState(false);
+    const [showtoast,setToast] = useState(false);
+    const [toastMessage,setMessage] = useState('');
+    const [toastType,setToastType] = useState(false);
     // console.log(countrys);
     // console.log(typeof(countrys));
     const HandleNumberChange = async (e) => {
@@ -35,11 +42,17 @@ const SendLinkForm = (props) => {
         
     }
     const inform = (message,type) => {
-        Swal.fire({
-            icon: type ? 'error' : 'success',
-            text:message,
-            showConfirmButton:false
-        })
+        setToast(true);
+        setToastType(type ? type : false);
+        setMessage(message);
+        // Swal.fire({
+        //     icon: type ? 'error' : 'success',
+        //     text:message,
+        //     showConfirmButton:false
+        // })
+        setInterval(()=>{
+            setToast(false);
+        },5000)
     }
     const SendSMS = (props) => {
     if(usernumber.length<6){
@@ -132,10 +145,20 @@ const SendLinkForm = (props) => {
                         </div>
                         </Fade>
                     </div>
+                    
                 <button type="button" className={active ? 'active' : ''} onClick={SendSMS}>{loading ? 'Sending...' : 'Text me the link'}</button>
                 </div>
             </div>
+            {/* <div id="toast-container" class="toast-bottom-center">
+                <div class="toast toast-success" aria-live="polite">
+                    <div class="toast-message">
+                        Hello World
+                    </div>
+                </div>
+            </div> */}
+
         </div>
+        <ShowToast message={toastMessage} type={toastType} show={showtoast}/>
         </Fade>
     )
 }

@@ -525,17 +525,19 @@ img {
 .footersection {
     /* width: 100%; */
     margin-left: 144px;
-    margin-right: 143px;
+    margin-right: 143px; 
 }
 
 .footer-item img {
     height: 40px;
     width: 198px;
 }
-
+#toast-container {
+    z-index: 99999999999999999;
+}
 .footer-top {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .footer-top .footer-item {
