@@ -15,9 +15,9 @@ const ShowToast = (props) => {
     console.log(showToast,props.show);
     return (
         <Fade top>
-        <div id={props.show ? "toast-container" : 'hidden'} class="toast-top-right" onClick={closeToast}>
-                <div class={!props.type ? "toast toast-success" : "toast toast-warning"} aria-live="polite">
-                    <div class="toast-message">
+        <div id={props.show ? "toast-container" : 'hidden'} className="toast-top-right" onClick={closeToast}>
+                <div className={!props.type ? "toast toast-success" : "toast toast-warning"} aria-live="polite">
+                    <div className="toast-message">
                         {props.message}
                     </div>
                 </div>
