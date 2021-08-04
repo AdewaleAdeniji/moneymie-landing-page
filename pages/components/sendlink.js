@@ -168,7 +168,7 @@ const SendLinkForm = (props) => {
                                         
                                         return (
                                             
-                                            <div className="selectoption" data-country={index} data-val={val} onClick={handleClickCountry}>
+                                            <div className="selectoption" key={index} data-country={index} data-val={val} onClick={handleClickCountry}>
                                                     {name} 
                                             </div>
                                         )
