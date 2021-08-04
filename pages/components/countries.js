@@ -1,5 +1,7 @@
-export const countrieslist = {
-    "AD": { "name": "Andorra", "native": "Andorra", "phone": "376", "continent": "EU", "capital": "Andorra la Vella", "currency": "EUR", "languages": ["ca"], "emoji": "🇦🇩", "emojiU": "U+1F1E6 U+1F1E9" },
+import React from 'react';
+
+export const countrieslist = () => {
+   const c = {"AD": { "name": "Andorra", "native": "Andorra", "phone": "376", "continent": "EU", "capital": "Andorra la Vella", "currency": "EUR", "languages": ["ca"], "emoji": "🇦🇩", "emojiU": "U+1F1E6 U+1F1E9" },
     "AE": { "name": "United Arab Emirates", "native": "دولة الإمارات العربية المتحدة", "phone": "971", "continent": "AS", "capital": "Abu Dhabi", "currency": "AED", "languages": ["ar"], "emoji": "🇦🇪", "emojiU": "U+1F1E6 U+1F1EA" },
     "AG": { "name": "Antigua and Barbuda", "native": "Antigua and Barbuda", "phone": "1268", "continent": "NA", "capital": "Saint John's", "currency": "XCD", "languages": ["en"], "emoji": "🇦🇬", "emojiU": "U+1F1E6 U+1F1EC" },
     "AI": { "name": "Anguilla", "native": "Anguilla", "phone": "1264", "continent": "NA", "capital": "The Valley", "currency": "XCD", "languages": ["en"], "emoji": "🇦🇮", "emojiU": "U+1F1E6 U+1F1EE" },
@@ -280,4 +282,7 @@ export const countrieslist = {
     },
     "ZM": { "name": "Zambia", "native": "Zambia", "phone": "260", "continent": "AF", "capital": "Lusaka", "currency": "ZMW", "languages": ["en"], "emoji": "🇿🇲", "emojiU": "U+1F1FF U+1F1F2" },
     "ZW": { "name": "Zimbabwe", "native": "Zimbabwe", "phone": "263", "continent": "AF", "capital": "Harare", "currency": "USD,ZAR,BWP,GBP,AUD,CNY,INR,JPY", "languages": ["en", "sn", "nd"], "emoji": "🇿🇼", "emojiU": "U+1F1FF U+1F1FC" }
+}
+
+    return c;
 }
