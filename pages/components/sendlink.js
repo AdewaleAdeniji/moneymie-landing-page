@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useEffect, useState} from 'react';
 import Fade from 'react-reveal/Fade';
 import Joi from 'joi';
 import Swal from 'sweetalert2'
@@ -6,10 +6,12 @@ import Swal from 'sweetalert2'
 import { countries,getEmojiFlag } from 'countries-list';
 import $ from "jquery";
 import ShowToast from './toast';
+import { countrieslist } from './countries';
 // import { message } from 'statuses';
 const SendLinkForm = (props) => {
-
-    const [countrys,setCountries] = useState(countries);
+    // console.log(JSON.stringify(countries));
+    // console.log(countrieslist);
+    const [countrys,setCountries] = useState(countrieslist);
     const [usernumber,setPhoneNumber] = useState('');
     const [error,setError] = useState(false);
     const [active,setActiveButton] = useState(false);
@@ -20,8 +22,23 @@ const SendLinkForm = (props) => {
     const [showtoast,setToast] = useState(false);
     const [toastMessage,setMessage] = useState('');
     const [toastType,setToastType] = useState(false);
-    // console.log(countrys);
-    // console.log(typeof(countrys));
+    useEffect(()=>{
+        document.body.addEventListener('click',(e)=>{
+            // setSelect(false);
+            const arr = e.target.classList;
+            arr.forEach((classname)=>{
+                console.log(classname)
+                if(classname=='chosenflag'||classname=='fa-angle-down'||classname=='options'){
+                    setSelect(true);
+                }
+                else {
+                    setSelect(false);
+                }
+            })
+            console.log(e.target.classList);
+        })
+
+    },[])
     const HandleNumberChange = async (e) => {
         setPhoneNumber(e.target.value);
         const usernum = e.target.value=='' ? '' : e.target.value
@@ -97,9 +114,20 @@ const SendLinkForm = (props) => {
             inform("Please fill in your number and ensure remove your country code",true);
         }
     }
+    const handleClickCountry = (e) => {
+        let countrydata = e.target.attributes.getNamedItem('data-country').value;
+        let country = e.target.attributes.getNamedItem('data-val').value;
+        // console.log(countrydata,val);
+        setSelect(false);
+        var countryarray = country.split(":");
+        var phonecode = "+"+countryarray[0];
+        var countrycode = (countryarray[1]).toLowerCase();
+        setPhoneCode(phonecode);
+        setCountryCode(countrycode);
+    }
     const handleCountries = (country) => {
         setSelect(true);
-        document.getElementById("selectcountry").click();
+        // document.getElementById("selectcountry").click();
     }
     const countryChange = (e) => {
         let country = e.target.value;
@@ -129,19 +157,26 @@ const SendLinkForm = (props) => {
                             <input type="number" placeholder="Enter your phone number" value={usernumber} onChange={HandleNumberChange}/>
                         <Fade top>
                         <div className={showSelect ? "countrydropdown" : 'hidden'}>
-                            <select className="select" onChange={countryChange} id="selectcountry">
-                                {
+                            
+                            <div className="selectcountrydropdown">
+                            {
                                     Object.keys(countrys).map((country,index)=>{
                                         const countrydetails = countrys[country];
                                         const name = countrydetails.name;
                                         const phonecode = countrydetails.phone;
                                         const val = phonecode+":"+country;
+                                        
                                         return (
-                                            <option value={val} key={index}>{name}</option>
+                                            
+                                            <div className="selectoption" data-country={index} data-val={val} onClick={handleClickCountry}>
+                                                    {name} 
+                                            </div>
                                         )
                                     })
-                                }    
-                            </select>
+                                } 
+                                
+                                
+                            </div>
                         </div>
                         </Fade>
                     </div>
