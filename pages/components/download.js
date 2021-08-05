@@ -14,10 +14,14 @@ const Download = (props) => {
             
             <div className="downloadbuttons">
                 <Fade left>
-                    <img src="/images/androidownload.svg"/>
+                    <a href='https://play.google.com/store/apps/details?id=moneymie.bank.nigeria.remit.sendmoney'>
+                        <img src="/images/androidownload.svg"/>
+                    </a>
                 </Fade>
                 <Fade right>
-                    <img className="ios" src="/images/iosdownload.svg"/>
+                    <a href='https://apps.apple.com/us/app/moneymie/id1538278032'>
+                        <img className="ios" src="/images/iosdownload.svg"/>
+                    </a>
                 </Fade>
             </div>
         </div>
