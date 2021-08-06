@@ -436,7 +436,7 @@ const Hero =  (props) => {
                             </div>
                             <i className="fa fa-angle-down"></i>
                         </div>
-                            <input type="number" placeholder="Enter your phone number" value={usernumber} onChange={HandleNumberChange}/>
+                            <input type="tel" placeholder="Enter your phone number" value={usernumber} onChange={HandleNumberChange}/>
                         <Fade top>
                         <div className={showSelect ? "countrydropdown" : 'hidden'}>
                             
