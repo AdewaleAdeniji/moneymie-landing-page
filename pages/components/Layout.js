@@ -15,14 +15,14 @@ const Layout = (props) => {
         <meta property="og:url" content="https://facebook.com/moneymie/"/>
         <meta property="og:title" content="Moneymie, digital bank for African migrants"/>
         <meta property="og:description" content="$ and ₦ instant accounts, transfers from $ to ₦ and back, naira debit cards, savings and more..."/>
-        <meta property="og:image" content=""/>
+        <meta property="og:image" content="/images/favicon.png"/>
 
         {/* <!-- Twitter --> */}
         <meta property="twitter:card" content="summary_large_image"/>
         <meta property="twitter:url" content="https://twitter.com/getMoneymie"/>
         <meta property="twitter:title" content="Moneymie, digital bank for African migrants"/>
         <meta property="twitter:description" content="$ and ₦ instant accounts, transfers from $ to ₦ and back, naira debit cards, savings and more..."/>
-        <meta property="twitter:image" content=""/>
+        <meta property="twitter:image" content="/images/favicon.png"/>
         <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon"/>
         <link rel="icon" href="/images/favicon.png" type="image/x-icon"/> 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
