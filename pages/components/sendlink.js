@@ -6,7 +6,8 @@ import Swal from 'sweetalert2'
 import { countries,getEmojiFlag } from 'countries-list';
 import $ from "jquery";
 import ShowToast from './toast';
-
+import sortArray from 'sort-array';
+import { allcountries } from './countries';
 // import { message } from 'statuses';
 const SendLinkForm = (props) => {
     // console.log(JSON.stringify(countries));
@@ -303,8 +304,14 @@ const SendLinkForm = (props) => {
     const [toastMessage,setMessage] = useState('');
     const [toastType,setToastType] = useState(false);
     useEffect(()=>{
+        console.log(allcountries);
         document.body.addEventListener('click',(e)=>{
             // setSelect(false);
+            // const newcountry = sortArray(countrys, {
+            //     by: 'openIssues',
+            //     order: 'desc'
+            //   })
+            
             const arr = e.target.classList;
             arr.forEach((classname)=>{
                 console.log(classname)
@@ -441,11 +448,11 @@ const SendLinkForm = (props) => {
                             <div className="selectcountrydropdown">
                             {
                                     Object.keys(countrys).map((country,index)=>{
+                                          
                                         const countrydetails = countrys[country];
                                         const name = countrydetails.name;
                                         const phonecode = countrydetails.phone;
                                         const val = phonecode+":"+country;
-                                        
                                         return (
                                             
                                             <div className="selectoption" key={index} data-country={index} data-val={val} onClick={handleClickCountry}>

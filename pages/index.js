@@ -12,6 +12,8 @@ import Reviews from './components/review';
 import Download from './components/download';
 import SendLinkForm from './components/sendlink';
 import Footer from './components/footer';
+import SendUSD from './components/sendusd2';
+
 
 export default function Home() {
   useEffect(function() {
@@ -40,6 +42,7 @@ export default function Home() {
         <HeaderNavBar/>
         <Hero/>
         <Partners/>
+        <SendUSD/>
         <SendUsd/>
         <TrustSignals/>
         <Reviews/>

@@ -8,7 +8,7 @@ const SendUsd = (props) => {
     const ImageWidth = useState(400);
     return (
         <>
-        <div className="col-md-12 sendusdsection">
+        <div className="col-md-12 sendusdsection sm-screen">
             <Fade left>
             <div className="col-md-6">
                 {/* <div className="sendusdimg"> */}

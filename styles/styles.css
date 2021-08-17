@@ -726,6 +726,9 @@ img {
     margin-left: 8px;
     font-weight: bold;
 }
+.big-screen {
+    display: none;
+}
 @media(min-width:200px) and (max-width:762px){
     .navdesktop {
         display: none;
@@ -1108,6 +1111,7 @@ button.menubtn {
     .hero-title-text {
         font-size: 53px;
     }
+    
 }
 @media(max-width:520px){
     .selectcountrydropdown {
