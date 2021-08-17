@@ -4,7 +4,25 @@ const Layout = (props) => {
   return (
     <div>
       <Head>
+        <meta charset="utf-8" />
         <title>{props.pageTitle}</title>
+        <title>Moneymie, digital bank for African migrants</title>
+        <meta name="title" content="Moneymie, digital bank for African migrants"/>
+        <meta name="description" content="$ and ₦ instant accounts, transfers from $ to ₦ and back, naira debit cards, savings and more..."/>
+
+        {/* <!-- Open Graph / Facebook --> */}
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://facebook.com/moneymie/"/>
+        <meta property="og:title" content="Moneymie, digital bank for African migrants"/>
+        <meta property="og:description" content="$ and ₦ instant accounts, transfers from $ to ₦ and back, naira debit cards, savings and more..."/>
+        <meta property="og:image" content=""/>
+
+        {/* <!-- Twitter --> */}
+        <meta property="twitter:card" content="summary_large_image"/>
+        <meta property="twitter:url" content="https://twitter.com/getMoneymie"/>
+        <meta property="twitter:title" content="Moneymie, digital bank for African migrants"/>
+        <meta property="twitter:description" content="$ and ₦ instant accounts, transfers from $ to ₦ and back, naira debit cards, savings and more..."/>
+        <meta property="twitter:image" content=""/>
         <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon"/>
         <link rel="icon" href="/images/favicon.png" type="image/x-icon"/> 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -19,6 +37,7 @@ const Layout = (props) => {
         />
         <link rel="manifest" href="/images/manifest.json"/>
         <link rel="apple-touch-icon" href="/images/favicon.png"/>
+        
       </Head>
       <div className="initdiv">
         {props.children}
