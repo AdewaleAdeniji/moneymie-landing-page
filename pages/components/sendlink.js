@@ -7,7 +7,7 @@ import { countries,getEmojiFlag } from 'countries-list';
 import $ from "jquery";
 import ShowToast from './toast';
 import sortArray from 'sort-array';
-import { allcountries } from './countries';
+
 // import { message } from 'statuses';
 const SendLinkForm = (props) => {
     // console.log(JSON.stringify(countries));
@@ -304,7 +304,7 @@ const SendLinkForm = (props) => {
     const [toastMessage,setMessage] = useState('');
     const [toastType,setToastType] = useState(false);
     useEffect(()=>{
-        console.log(allcountries);
+        // console.log(allcountries);
         document.body.addEventListener('click',(e)=>{
             // setSelect(false);
             // const newcountry = sortArray(countrys, {
