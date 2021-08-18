@@ -9,9 +9,9 @@ const Layout = (props) => {
         <title>Moneymie, digital bank for African migrants</title>
         <meta name="title" content="Moneymie, digital bank for African migrants"/>
         <meta name="description" content="$ and ₦ instant accounts, transfers from $ to ₦ and back, naira debit cards, savings and more..."/>
-        <meta itemprop="name" content="Moneymie, digital bank for African migrants"/>
-        <meta itemprop="description" content="$ and ₦ instant accounts, transfers from $ to ₦ and back, naira debit cards, savings and more..."/>
-        <meta itemprop="image" content="/images/favicon.png"/>
+        <meta itemProp="name" content="Moneymie, digital bank for African migrants"/>
+        <meta itemProp="description" content="$ and ₦ instant accounts, transfers from $ to ₦ and back, naira debit cards, savings and more..."/>
+        <meta itemProp="image" content="/images/favicon.png"/>
 
 
         {/* <!-- Open Graph / Facebook --> */}
